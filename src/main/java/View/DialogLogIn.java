@@ -5,12 +5,12 @@
 package View;
 
 
-public class DialogLogin extends javax.swing.JDialog {
+public class DialogLogIn extends javax.swing.JDialog {
 
     /**
      * Creates new form DialogLogin
      */
-    public DialogLogin(java.awt.Frame parent, boolean modal) {
+    public DialogLogIn(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }

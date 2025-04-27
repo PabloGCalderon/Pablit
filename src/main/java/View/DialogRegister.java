@@ -5,12 +5,12 @@
 package View;
 
 
-public class DialogFriends extends javax.swing.JDialog {
+public class DialogRegister extends javax.swing.JDialog {
 
     /**
      * Creates new form DialogFriends
      */
-    public DialogFriends(java.awt.Frame parent, boolean modal) {
+    public DialogRegister(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }

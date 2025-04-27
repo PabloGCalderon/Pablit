@@ -4,7 +4,50 @@
  */
 package Controller;
 
+import View.FrmHome;
+import View.FrmWorkout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
-public class WorkoutController {
+
+public class WorkoutController implements ActionListener{
+    private FrmWorkout frmWorkout;
+    private FrmHome frmHome;
+    private int countDown ;
+
+    public WorkoutController() {
+        this.frmWorkout = new FrmWorkout();
+        this.frmWorkout.timeListen(this);
+        this.frmWorkout.setVisible(true);
+        this.frmHome = new FrmHome();
+    }
+    public void actionPerformed(ActionEvent e) {
+        // Identificar el origen del evento con el comando de acción
+        String command = e.getActionCommand();
+
+        switch (command) {
+             case "play":
+                frmWorkout.startTimer(); // Iniciar el temporizador
+                break;
+
+            case "pause":
+                frmWorkout.pauseTimer(); // Pausar el temporizador
+                break;
+
+            case "cancel":
+                frmWorkout.pauseTimer(); 
+                frmWorkout.setVisible(false);
+                frmHome.setVisible(true); // Mostrar FrmHome
+                break;
+
+            case "restart":
+                frmWorkout.restartTimer(); // Reiniciar el temporizador
+                break;
+        }
+    }
+    //fin actionPerformed
     
+  
 }

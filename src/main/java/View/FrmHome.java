@@ -4,6 +4,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 
 public class FrmHome extends javax.swing.JFrame {
 
@@ -12,6 +14,14 @@ public class FrmHome extends javax.swing.JFrame {
      */
     public FrmHome() {
         initComponents();
+         setLocationRelativeTo(null);
+    }
+    
+    public void listenButtons(ActionListener controller){
+        this.btnLogOut.addActionListener(controller);
+        this.btnFriends.addActionListener(controller);
+        this.btnWorkOut.addActionListener(controller);
+        this.btnPerfil.addActionListener(controller);
     }
 
     /**
@@ -23,60 +33,47 @@ public class FrmHome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnExit = new javax.swing.JButton();
-        btnProfile = new javax.swing.JButton();
+        btnLogOut = new javax.swing.JButton();
+        btnWorkOut = new javax.swing.JButton();
+        btnPerfil = new javax.swing.JButton();
         btnFriends = new javax.swing.JButton();
-        btnWorkout = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnExit.setText("Exit");
+        btnLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logOut.png"))); // NOI18N
+        btnLogOut.setActionCommand("logOut");
+        btnLogOut.setBorderPainted(false);
+        btnLogOut.setContentAreaFilled(false);
+        getContentPane().add(btnLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 510, 120, 100));
 
-        btnProfile.setText("Profile");
+        btnWorkOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/workout.png"))); // NOI18N
+        btnWorkOut.setActionCommand("workOut");
+        btnWorkOut.setBorderPainted(false);
+        btnWorkOut.setContentAreaFilled(false);
+        getContentPane().add(btnWorkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, -1, 130));
 
-        btnFriends.setText("Friends");
+        btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/perfil.png"))); // NOI18N
+        btnPerfil.setActionCommand("perfil");
+        btnPerfil.setBorderPainted(false);
+        btnPerfil.setContentAreaFilled(false);
+        getContentPane().add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, 130, 130));
 
-        btnWorkout.setText("Workout");
+        btnFriends.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/friends.png"))); // NOI18N
+        btnFriends.setActionCommand("friends");
+        btnFriends.setBorderPainted(false);
+        btnFriends.setContentAreaFilled(false);
+        getContentPane().add(btnFriends, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, 120, 110));
 
-        jLabel1.setText("BiggestBooty");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg_nb.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 630, 10));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFriends, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(btnProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
-                        .addComponent(btnWorkout, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(161, 161, 161)
-                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(47, 47, 47))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(381, 381, 381))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(btnFriends, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(256, 256, 256)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnWorkout, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -87,10 +84,11 @@ public class FrmHome extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnFriends;
-    private javax.swing.JButton btnProfile;
-    private javax.swing.JButton btnWorkout;
+    private javax.swing.JButton btnLogOut;
+    private javax.swing.JButton btnPerfil;
+    private javax.swing.JButton btnWorkOut;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,6 +22,7 @@ public class FrmWorkout extends javax.swing.JFrame {
      */
     public FrmWorkout() {
         initComponents();
+         setLocationRelativeTo(null);
     }
     
     public void timeListen(ActionListener controller){
@@ -146,6 +147,7 @@ public class FrmWorkout extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         cboxSeconds = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -181,22 +183,27 @@ public class FrmWorkout extends javax.swing.JFrame {
         lblTiempo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTiempo.setForeground(new java.awt.Color(51, 0, 51));
         lblTiempo.setText("0:00:00");
-        getContentPane().add(lblTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 70, 60));
+        getContentPane().add(lblTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 70, 50));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Temporizador");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 180, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 180, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aqua.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 610, 10));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg_tiempo.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
 
         cboxSeconds.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---", "120", "300", "600", "1200", "1800", "2400", "3000", "3600" }));
         getContentPane().add(cboxSeconds, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 90, 40));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 255, 204));
+        jLabel7.setText("Tiempo Restante");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("segundos");
@@ -209,7 +216,7 @@ public class FrmWorkout extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg_nb.png"))); // NOI18N
         jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 220));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 260));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.png"))); // NOI18N
         bg.setText("jLabel1");
@@ -236,6 +243,7 @@ public class FrmWorkout extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel lblTiempo;
     // End of variables declaration//GEN-END:variables
 

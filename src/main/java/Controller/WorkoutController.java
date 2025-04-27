@@ -40,6 +40,8 @@ public class WorkoutController implements ActionListener{
                 frmWorkout.pauseTimer(); 
                 frmWorkout.setVisible(false);
                 frmHome.setVisible(true); // Mostrar FrmHome
+                new HomeController();
+                this.frmHome.requestFocusInWindow();
                 break;
 
             case "restart":

@@ -4,6 +4,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 
 public class DialogRegister extends javax.swing.JDialog {
 
@@ -14,7 +16,11 @@ public class DialogRegister extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
-
+    public void setListen(ActionListener controller)
+    {
+        this.btnBack.addActionListener(controller);
+        this.btnRegister.addActionListener(controller);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -24,18 +30,35 @@ public class DialogRegister extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        txtUsername = new javax.swing.JTextField();
+        txtWeight = new javax.swing.JTextField();
+        txtAge = new javax.swing.JTextField();
+        txtGenre = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        btnRegister = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 111, -1));
+        getContentPane().add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 111, -1));
+        getContentPane().add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 111, -1));
+        getContentPane().add(txtGenre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 111, -1));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 113, -1));
+
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonSalirRegister.png"))); // NOI18N
+        btnBack.setActionCommand("Back");
+        btnBack.setContentAreaFilled(false);
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        btnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonDialogRegister(3).png"))); // NOI18N
+        btnRegister.setActionCommand("Register");
+        btnRegister.setContentAreaFilled(false);
+        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 260, 30));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dialogRegister.jpg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -44,8 +67,17 @@ public class DialogRegister extends javax.swing.JDialog {
      * @param args the command line arguments
      */
    
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRegister;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtGenre;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtUsername;
+    private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables
 
+}

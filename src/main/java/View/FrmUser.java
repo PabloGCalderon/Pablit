@@ -4,6 +4,9 @@
  */
 package View;
 
+import Model.User;
+import java.awt.event.ActionListener;
+
 
 public class FrmUser extends javax.swing.JFrame {
 
@@ -12,8 +15,40 @@ public class FrmUser extends javax.swing.JFrame {
      */
     public FrmUser() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    
+    public void setListenFrmUser(ActionListener controller)
+    {
+     this.btnEdit.addActionListener(controller);
+     this.btnBack.addActionListener(controller);   
     }
 
+    public void setUserData(User user)
+    {
+        lblUsername.setText(user.getUsername());
+        lblLevel.setText(String.valueOf(user.getLevel()));
+        txtAge.setText(String.valueOf(user.getAge()));
+        txtWeight.setText(String.valueOf(user.getWeight()));
+        txtGenre.setText(user.getSex());
+    }
+    
+    public String getAge() {
+        return txtAge.getText();
+    }
+
+    public String getWeight() {
+        return txtWeight.getText();
+    }
+
+    public String getGenre() {
+        return txtGenre.getText();
+    }
+    
+    public void updateLevelDisplay(int newLevel) {
+    lblLevel.setText("Level: " + newLevel);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -23,124 +58,45 @@ public class FrmUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        txtHeight = new javax.swing.JTextField();
+        lblLevel = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
         txtWeight = new javax.swing.JTextField();
         txtGenre = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        lblLevel = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Name");
+        lblLevel.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        lblLevel.setForeground(new java.awt.Color(0, 0, 0));
+        lblLevel.setText("Level");
+        getContentPane().add(lblLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 130, 20));
 
-        jLabel2.setText("Height");
+        lblUsername.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(0, 0, 0));
+        lblUsername.setText("Username");
+        getContentPane().add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 130, 20));
+        getContentPane().add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 130, -1));
+        getContentPane().add(txtGenre, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 130, -1));
+        getContentPane().add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 130, -1));
 
-        jLabel3.setText("Weight");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonBackUser.png"))); // NOI18N
+        btnBack.setActionCommand("BackUser");
+        btnBack.setBorderPainted(false);
+        btnBack.setContentAreaFilled(false);
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 526, 125, 59));
 
-        jLabel4.setText("Genre");
+        btnEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonEditUser.png"))); // NOI18N
+        btnEdit.setActionCommand("EditUser");
+        btnEdit.setBorderPainted(false);
+        btnEdit.setContentAreaFilled(false);
+        getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 210, 130));
 
-        jLabel5.setText("Age");
-
-        txtName.setText("jTextField1");
-
-        txtHeight.setText("jTextField2");
-
-        txtWeight.setText("jTextField3");
-
-        txtGenre.setText("jTextField4");
-
-        txtAge.setText("jTextField5");
-
-        jLabel6.setText("Level");
-
-        lblLevel.setText("xx");
-
-        btnBack.setText("Back");
-
-        btnEdit.setText("Edit");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel3)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel1))))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addGap(7, 7, 7)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel6)))
-                        .addGap(66, 66, 66)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblLevel)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtGenre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(btnEdit)))
-                .addContainerGap(453, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addGap(67, 67, 67))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(txtGenre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(lblLevel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(btnEdit))
-                .addGap(35, 35, 35))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FrmUser.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,17 +109,11 @@ public class FrmUser extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnEdit;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel lblLevel;
+    private javax.swing.JLabel lblUsername;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtGenre;
-    private javax.swing.JTextField txtHeight;
-    private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables
 }

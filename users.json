@@ -1,0 +1,42 @@
+[
+  {
+    "username": "BiggestBooty",
+    "age": 25,
+    "weight": 110.0,
+    "sex": "Men",
+    "level": 2,
+    "password": "Test"
+  },
+  {
+    "username": "BigBooty",
+    "age": 25,
+    "weight": 100.0,
+    "sex": "Women",
+    "level": 1,
+    "password": "Test1"
+  },
+  {
+    "username": "BiggerBooty",
+    "age": 38,
+    "weight": 105.0,
+    "sex": "Goth",
+    "level": 1,
+    "password": "Test3"
+  },
+  {
+    "username": "test",
+    "age": 12,
+    "weight": 12.0,
+    "sex": "qw",
+    "level": 1,
+    "password": "test2"
+  },
+  {
+    "username": "1",
+    "age": 23,
+    "weight": 23.0,
+    "sex": "wd",
+    "level": 10,
+    "password": "1"
+  }
+]

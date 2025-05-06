@@ -28,36 +28,28 @@
     <Component class="javax.swing.JTextField" name="txtUsername">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="150" width="111" height="-1"/>
+          <AbsoluteConstraints x="280" y="140" width="111" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtWeight">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="190" width="111" height="-1"/>
+          <AbsoluteConstraints x="280" y="180" width="111" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAge">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="240" width="111" height="-1"/>
+          <AbsoluteConstraints x="280" y="230" width="111" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRegister">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/BotonDialogRegister.png"/>
-        </Property>
-        <Property name="actionCommand" type="java.lang.String" value="Register"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="txtGenre">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="390" width="290" height="30"/>
+          <AbsoluteConstraints x="280" y="280" width="111" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -66,27 +58,35 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/images/BotonSalirRegister.png"/>
         </Property>
-        <Property name="actionCommand" type="java.lang.String" value="Back"/>
+        <Property name="actionCommand" type="java.lang.String" value="BackDialogRegister"/>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="100" y="420" width="70" height="70"/>
+          <AbsoluteConstraints x="90" y="400" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtGenre">
+    <Component class="javax.swing.JButton" name="btnRegister">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/images/BotonDialogRegister(3).png"/>
+        </Property>
+        <Property name="actionCommand" type="java.lang.String" value="RegisterSuccess"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="290" width="111" height="-1"/>
+          <AbsoluteConstraints x="150" y="380" width="260" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPassword">
+    <Component class="javax.swing.JPasswordField" name="txtPassword">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="340" width="113" height="-1"/>
+          <AbsoluteConstraints x="280" y="330" width="110" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -98,7 +98,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="570" height="570"/>
+          <AbsoluteConstraints x="0" y="0" width="570" height="550"/>
         </Constraint>
       </Constraints>
     </Component>

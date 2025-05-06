@@ -4,6 +4,7 @@
  */
 package Main;
 
+import Controller.HomeController;
 import Controller.UserController;
 
 
@@ -14,7 +15,7 @@ public class Main {
      */
     public static void main(String[] args)
     {
-     UserController userController = new UserController();   
+     UserController UserController = new UserController();   
     }
     
 }

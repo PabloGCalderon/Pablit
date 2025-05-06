@@ -15,12 +15,39 @@ public class DialogRegister extends javax.swing.JDialog {
     public DialogRegister(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
     }
     public void setListen(ActionListener controller)
     {
         this.btnBack.addActionListener(controller);
         this.btnRegister.addActionListener(controller);
     }
+    
+     public String getUsername()
+    {
+        return this.txtUsername.getText();
+    }
+      
+     public String getWeight() 
+    {
+        return this.txtWeight.getText();
+    }
+     
+     public String getAge() 
+    {
+        return this.txtAge.getText();
+    }
+     
+     public String getGenre() 
+    {
+        return this.txtGenre.getText();
+    }
+     public String getPassword()
+    {
+        return this.txtPassword.getText();
+    }
+    
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,9 +61,9 @@ public class DialogRegister extends javax.swing.JDialog {
         txtWeight = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
         txtGenre = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         btnRegister = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -45,17 +72,19 @@ public class DialogRegister extends javax.swing.JDialog {
         getContentPane().add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 111, -1));
         getContentPane().add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 111, -1));
         getContentPane().add(txtGenre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 111, -1));
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 113, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonSalirRegister.png"))); // NOI18N
-        btnBack.setActionCommand("Back");
+        btnBack.setActionCommand("BackDialogRegister");
+        btnBack.setBorderPainted(false);
         btnBack.setContentAreaFilled(false);
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
 
         btnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonDialogRegister(3).png"))); // NOI18N
-        btnRegister.setActionCommand("Register");
+        btnRegister.setActionCommand("RegisterSuccess");
+        btnRegister.setBorderPainted(false);
         btnRegister.setContentAreaFilled(false);
         getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 260, 30));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 110, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dialogRegister.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 550));
@@ -75,7 +104,7 @@ public class DialogRegister extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtGenre;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables

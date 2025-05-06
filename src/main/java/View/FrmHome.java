@@ -5,8 +5,12 @@
 package View;
 
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 
-
+/**
+ *
+ * @author ramir
+ */
 public class FrmHome extends javax.swing.JFrame {
 
     /**
@@ -14,14 +18,24 @@ public class FrmHome extends javax.swing.JFrame {
      */
     public FrmHome() {
         initComponents();
+  setLocationRelativeTo(null);
     }
-
-     public void listenButtons(ActionListener controller){
+    
+    public void listenButtons(ActionListener controller){
         this.btnLogOut.addActionListener(controller);
         this.btnFriends.addActionListener(controller);
         this.btnWorkOut.addActionListener(controller);
-        this.btnProfile.addActionListener(controller);
+        this.btnPerfil.addActionListener(controller);
     }
+    
+    public void setWorkoutStatusIcon(ImageIcon icon) {
+        lblPablitState.setIcon(icon);
+    }
+    
+    public void updateLevelDisplay(int level) {
+    lblLevelHome.setText(String.valueOf(level));
+}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,42 +46,96 @@ public class FrmHome extends javax.swing.JFrame {
     private void initComponents() {
 
         btnLogOut = new javax.swing.JButton();
-        btnProfile = new javax.swing.JButton();
-        btnFriends = new javax.swing.JButton();
         btnWorkOut = new javax.swing.JButton();
+        btnPerfil = new javax.swing.JButton();
+        btnFriends = new javax.swing.JButton();
+        lblLevelHome = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lblPablitState = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnLogOut.setText("Exit");
-        getContentPane().add(btnLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(653, 662, 134, 53));
+        btnLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logOut.png"))); // NOI18N
+        btnLogOut.setActionCommand("logOut");
+        btnLogOut.setBorderPainted(false);
+        btnLogOut.setContentAreaFilled(false);
+        getContentPane().add(btnLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 120, 100));
 
-        btnProfile.setText("Profile");
-        getContentPane().add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 662, 134, 53));
+        btnWorkOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/workout.png"))); // NOI18N
+        btnWorkOut.setActionCommand("workOut");
+        btnWorkOut.setBorderPainted(false);
+        btnWorkOut.setContentAreaFilled(false);
+        getContentPane().add(btnWorkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 540, -1, 130));
 
-        btnFriends.setText("Friends");
-        getContentPane().add(btnFriends, new org.netbeans.lib.awtextra.AbsoluteConstraints(653, 26, 134, 53));
+        btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/perfil.png"))); // NOI18N
+        btnPerfil.setActionCommand("perfil");
+        btnPerfil.setBorderPainted(false);
+        btnPerfil.setContentAreaFilled(false);
+        getContentPane().add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 130, 130));
 
-        btnWorkOut.setText("Workout");
-        getContentPane().add(btnWorkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 662, 134, 53));
+        btnFriends.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/friends.png"))); // NOI18N
+        btnFriends.setActionCommand("friends");
+        btnFriends.setBorderPainted(false);
+        btnFriends.setContentAreaFilled(false);
+        getContentPane().add(btnFriends, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 550, 120, 110));
 
-        jLabel1.setText("BiggestBooty");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 335, -1, -1));
+        lblLevelHome.setText("0");
+        getContentPane().add(lblLevelHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/estrellita2.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg_nb.png"))); // NOI18N
+        jLabel5.setText("jLabel2");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 630, 10));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/estrellita.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel6.setText("Level");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg_tiempo.png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg_nb.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 630, 10));
+
+        lblPablitState.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pablitoEnojao.png"))); // NOI18N
+        getContentPane().add(lblPablitState, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 630, 420));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFriends;
     private javax.swing.JButton btnLogOut;
-    private javax.swing.JButton btnProfile;
+    private javax.swing.JButton btnPerfil;
     private javax.swing.JButton btnWorkOut;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel lblLevelHome;
+    private javax.swing.JLabel lblPablitState;
     // End of variables declaration//GEN-END:variables
 }

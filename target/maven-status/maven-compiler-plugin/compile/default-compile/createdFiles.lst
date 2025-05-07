@@ -2,6 +2,8 @@ View\FrmFriendsTop$1.class
 Controller\FriendsController.class
 Controller\HomeController.class
 View\DialogLogin.class
+Controller\FriendsController$PilaAmigos.class
+Controller\FriendsController$Nodo.class
 View\DialogLogin$2.class
 View\FrmWorkout.class
 View\FrmWin.class
@@ -19,6 +21,7 @@ View\FrmFriendList$2.class
 View\FrmHome.class
 View\FrmFriendList.class
 View\FrmWin$1.class
+View\FrmFriendsTop$2.class
 View\FrmFriendList$1.class
 Model\User.class
 Controller\FriendsController$1.class

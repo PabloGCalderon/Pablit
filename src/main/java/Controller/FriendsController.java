@@ -122,7 +122,71 @@ public class FriendsController implements ActionListener {
                 }
                 System.out.println("Delete");
                 break;
+                
+                case "Top":
+                frmFriendsTop.loadFriendsByLevel();
+                break;
+                case "Recent":
+                frmFriendsTop.loadFriends();
+                break;
 
+
+        }
+    }
+    //Clase interna para nodo
+     private class Nodo {
+
+        private User dato;
+        private Nodo siguiente;
+
+        public Nodo(User dato) {
+            this.dato = dato;
+            this.siguiente = null;
+        }
+
+        public User getDato() {
+            return dato;
+        }
+
+        public Nodo getSiguiente() {
+            return siguiente;
+        }
+
+        public void setSiguiente(Nodo siguiente) {
+            this.siguiente = siguiente;
+        }
+    }
+  
+    // Clase interna tipo pila
+    private class PilaAmigos {
+
+        private Nodo cima;
+        private int longitud;
+
+        public PilaAmigos() {
+            cima = null;
+            longitud = 0;
+        }
+
+        public void push(User amigo) {
+            Nodo nodo = new Nodo(amigo);
+            nodo.setSiguiente(cima);
+            cima = nodo;
+            longitud++;
+        }
+
+        public boolean isEmpty() {
+            return cima == null;
+        }
+
+        public ArrayList<User> toList() {
+            ArrayList<User> lista = new ArrayList<>();
+            Nodo nodo = cima;
+            while (nodo != null) {
+                lista.add(nodo.getDato());
+                nodo = nodo.getSiguiente();
+            }
+            return lista;
         }
     }
 
@@ -136,33 +200,35 @@ public class FriendsController implements ActionListener {
         return false;
     }
 
-    public DefaultTableModel getFriendsTableModel() {
+   public DefaultTableModel getFriendsTableModel(boolean ordenarPorNivel) {
         String[] columnNames = {"Username", "Nivel"};
-        ArrayList<Friends> allFriends = friendsDAO.getAll(); // Obtiene todas las relaciones de amistad
-        ArrayList<String> friendList = new ArrayList<>();    // Lista de usernames de amigos
+        ArrayList<Friends> allFriends = friendsDAO.getAll();
+        ArrayList<String> friendList = new ArrayList<>();
 
-        for (Friends f : allFriends) {// Recorre todas las relaciones
+        for (Friends f : allFriends) {
             if (f.getUsername().equals(currentUser)) {
-                friendList.add(f.getFriendUsername());   // Agrega el username del amigo a la lista
+                friendList.add(f.getFriendUsername());
             }
         }
 
         UserRegister userRegister = new UserRegister();
-        ArrayList<Object[]> dataRows = new ArrayList<>();// Lista para las filas de la tabla
+        PilaAmigos pila = new PilaAmigos();
 
-        for (String friendUsername : friendList) {//Recorre cada amigo
-            User friend = userRegister.searchByUsername(friendUsername); //Busca al amigo
-            if (friend != null) {
-                dataRows.add(new Object[]{friendUsername, friend.getLevel()});
+        for (String username : friendList) {
+            User amigo = userRegister.searchByUsername(username);
+            if (amigo != null) {
+                pila.push(amigo);
             }
         }
 
-        dataRows.sort((a, b) -> Integer.compare((Integer) b[1], (Integer) a[1])); // Ordena por nivel descendente
+        ArrayList<User> amigos = pila.toList();
+        if (ordenarPorNivel) {
+            amigos.sort((a, b) -> Integer.compare(b.getLevel(), a.getLevel()));
+        }
 
-        DefaultTableModel model = new DefaultTableModel(columnNames, 0); // Crea el modelo de tabla vacío
-
-        for (Object[] row : dataRows) { // Agrega  fila ordenada 
-            model.addRow(row);
+        DefaultTableModel model = new DefaultTableModel(columnNames, 0);
+        for (User user : amigos) {
+            model.addRow(new Object[]{user.getUsername(), user.getLevel()});
         }
 
         return model;

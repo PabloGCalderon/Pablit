@@ -15,15 +15,22 @@ public class FrmFriendsTop extends javax.swing.JFrame {
         this.friendsController = controller;
         this.btnBack.addActionListener(friendsController); 
         this.btnDelete.addActionListener(friendsController);
+        this.btnTop.addActionListener(friendsController);  
+        this.btnRecent.addActionListener(friendsController);
         loadFriends();
         setLocationRelativeTo(null);
     }
     
 
     public void loadFriends() {
-    DefaultTableModel model = friendsController.getFriendsTableModel();
-    tblTopFriends.setModel(model); // donde yourTable es tu JTabl
-    }
+    DefaultTableModel model = friendsController.getFriendsTableModel(false);// con orden de Mas recientes
+    tblTopFriends.setModel(model);
+}
+    
+    public void loadFriendsByLevel() {
+    DefaultTableModel model = friendsController.getFriendsTableModel(true); // Con orden de nivel
+    tblTopFriends.setModel(model);
+}
     
     public int getSelectedRow() {
         return tblTopFriends.getSelectedRow();
@@ -41,6 +48,8 @@ public class FrmFriendsTop extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnTop = new javax.swing.JButton();
+        btnRecent = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTopFriends = new javax.swing.JTable();
@@ -49,6 +58,23 @@ public class FrmFriendsTop extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnTop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonTopFriends.png"))); // NOI18N
+        btnTop.setActionCommand("Top");
+        btnTop.setBorderPainted(false);
+        btnTop.setContentAreaFilled(false);
+        getContentPane().add(btnTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, -1, -1));
+
+        btnRecent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonRecentFriends.png"))); // NOI18N
+        btnRecent.setActionCommand("Recent");
+        btnRecent.setBorderPainted(false);
+        btnRecent.setContentAreaFilled(false);
+        btnRecent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRecentActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRecent, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, -1, -1));
 
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BotonDeleteFriend.png"))); // NOI18N
         btnDelete.setActionCommand("Delete");
@@ -59,7 +85,7 @@ public class FrmFriendsTop extends javax.swing.JFrame {
                 btnDeleteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, -1, -1));
 
         tblTopFriends.setBackground(new java.awt.Color(204, 204, 255));
         tblTopFriends.setModel(new javax.swing.table.DefaultTableModel(
@@ -94,6 +120,10 @@ public class FrmFriendsTop extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    private void btnRecentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRecentActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -102,6 +132,8 @@ public class FrmFriendsTop extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnRecent;
+    private javax.swing.JButton btnTop;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblTopFriends;

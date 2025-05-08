@@ -5,19 +5,21 @@ Integrantes de proyecto:
 -Leyder Bentancourt Hernández C31133 
 -Pablo González Calderón C33332
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Título: Primera reunión de planificación del proyecto Pablit. 
 Actividad: Reunión para hablar del proyecto, qué partes serán necesarias, se crea el primer boceto para la mascota Pablit en esta reunión (hecho por Jimena). Además, se definen varias partes del proyecto, como: objetivos, supuestos y alcances (estos los definió solamente Denisse), justificación y la propuesta.
 Fecha: 22/03/2025 Hora: 4:00 p.m. - 6:00pm
-Integrantes reunidos: 4 (Leyder , Jimena, Pablo, Denisse)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Integrantes reunidos: 4 (Leyder , Jimena, Pablo, Denisse).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Delegación del trabajo. 
-Actividad: Se dividió casi de forma aleatoria lo que haría cada integrante, exceptuando Jimena que pidió seguir creando a la mascota del proyecto Pablit, además se creo los primeros wireframe de baja calidad para disponer el orden de las vantanas en el proyecto: https://drive.google.com/drive/folders/12IYxQ6AurNRcQY8GinfDGid6vTR2u7L8?usp=sharing
+Actividad: Se dividió casi de forma aleatoria lo que haría cada integrante, exceptuando Jimena que pidió seguir creando a la mascota del proyecto Pablit, además se creó los primeros wireframe de baja calidad para disponer el orden de las ventanas en el proyecto: https://drive.google.com/drive/folders/12IYxQ6AurNRcQY8GinfDGid6vTR2u7L8?usp=sharing
 Fecha: 22/03/2025 Hora: 4:30 p.m. - 7:30
 Integrantes reunidos: 4 (Leyder, Jimena, Pablo, Denisse)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Creación UML - primera parte
 Actividad: Se creó la primera versión del UML, el cual luego se modificará por Denisse Ramírez.
@@ -25,7 +27,7 @@ Fecha de inicio: 25/03/2025 Hora:  7:23pm
 Fecha de finalización: 26/03/2025 Hora:  12:50am
 Integrante que realizó la actividad: Leyder Bentancourt
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Creación espacio Git & parte gráfica
 Actividad: Se crea el espacio y se define la paleta de colores para tener una identidad de marca definida, además de definir la parte gráfica del proyecto
@@ -34,7 +36,7 @@ Integrante que realizó el Git: Pablo González
 Integrante que  realizó la paleta de colores: Denisse Ramírez
 Integrantes ayudaron dando sugerencias: Leyder Bentancourt & Jimena Meza
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Creación botones & otros elementos gráficos
 Actividad: Se crea el diseño para los botones y fondos
@@ -42,7 +44,7 @@ Fecha de inicio: 25/04/2025 Hora: 9:20pm
 Fecha de finalización: 4/05/2025
 Integrante que realizó esta actividad: Denisse Ramírez
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Creación de los diferentes frm y otras ventanas.
 Actividad: Cada integrante desarrolló la parte del proyecto que le fue asignada previamente.
@@ -57,7 +59,7 @@ Integrante que realizó la versión preliminar de FrmWin: Jimena Meza
 Integrante que realizó la versión preliminar del controlador de frmUser & DialogRegister: Pablo González & Leyder Bentancourt
 Integrante que realizó la versión preliminar del controlador de FrmWorkout & FrmHome: Denisse Ramírez
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Problemas con Push & Coordinación en Git
 Actividad: Intento de hacer push al repositorio por parte de los integrantes, con errores en la sincronización y conflictos en Git. 
@@ -66,7 +68,7 @@ Fecha: 26/04/2025
 Integrantes que realizaron un push: Jimena Meza, Denisse Ramirez & Pablo González
 Integrante que tuvo problemas con el  push: Leyder Bentancourt
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Trabajo remoto en desarrollo de código: comunicación y gestión en Git
 Actividad: Arreglar problemas menores del código, se elimino la rama que dio problemas y se realizó un push general con: 'add'.
@@ -75,7 +77,7 @@ fecha de finalización: 28/04/2025 hora: 03:26am.
 Integrantes reunidos: Denisse Ramirez & Pablo González.
 Integrante que pudo realizar el push: Denisse Ramirez.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Modificación del UML
 Actividad: Se modificó el uml agregandole ciertas partes y corrigiendo errores
@@ -83,7 +85,7 @@ Fecha de inicio: 28/04/2025. Hora: 12:57am
 Fecha de finalización:  28/04/2025. Hora: 2:11am
 Integrante que realizó la modificación: Denisse Ramirez.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Diseño final de la mascota Pablit
 Actividad: Creación de fondo para Pablit, agregar color Pablit y detalles menores para las ventanas.
@@ -91,7 +93,7 @@ fecha de Inicio: 2/05/2025 hora: 4:20am
 fecha de finalización: 3/05/2025 hora: 11:48
 Integrante que realizó esta Actividad: Denisse Ramírez.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Implementación de los aspectos finales del proyecto
 
@@ -114,7 +116,7 @@ Integrante que realizó el sistema de amigos: Leyder Bentancourt
 Integrante que empezó el sistema niveles en el frmHome: Denisse Ramírez
 Integrante que finalizó  el sistema niveles en el frmHome: Pablo González
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Título: Ultimo Push a git
 

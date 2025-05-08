@@ -17,6 +17,7 @@ public class WorkoutController implements ActionListener
     private FrmWorkout frmWorkout;
     private FrmHome frmHome;
     private int countDown ;
+    private int reps;
 
     public WorkoutController(FrmHome frmHome, HomeController homeController) {
         
@@ -44,27 +45,42 @@ public class WorkoutController implements ActionListener
             case "cancel":
                 frmWorkout.pauseTimer(); 
                 frmWorkout.dispose();
-                frmHome.setVisible(true); // Mostrar FrmHome
+                frmHome.setVisible(true); // show FrmHome
                 this.frmHome.requestFocusInWindow();
                 break;
 
             case "restart":
-                frmWorkout.restartTimer(); // Reiniciar el temporizador
+                frmWorkout.restartTimer(); // restart the timer
                 frmWorkout.clean(true);
+                cleanRep(frmWorkout);//
                 break;
         }
     }//end actionPerformed
     
    public boolean validateValues(FrmWorkout frmWorkout) {
         int secondsSelected;
+        String training;
         try {
             secondsSelected = Integer.parseInt(frmWorkout.getSelectedSeconds()); 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Please select a valid number of seconds!", "Validation Error", JOptionPane.WARNING_MESSAGE);
             return false;
         }
+        
+        try {
+            reps  = Integer.parseInt(frmWorkout.getSelectedReps()); 
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please select a number of reps", "Validation Error", JOptionPane.WARNING_MESSAGE);
+            return false;
+        } 
+        
+         if(frmWorkout.getSelectedTraining().equals("---")){
+            JOptionPane.showMessageDialog(null, "Please select a training to continue", "Validation Error", JOptionPane.WARNING_MESSAGE);
+            return false;
+        
+         }
 
-        int reps = Integer.parseInt(frmWorkout.getSelectedReps());
+        reps = Integer.parseInt(frmWorkout.getSelectedReps());
         int timePerRep = 40;
         int totalReps = timePerRep * reps;
 
@@ -78,5 +94,7 @@ public class WorkoutController implements ActionListener
         return true; 
     }
     
-    
+    public void cleanRep(FrmWorkout frmWorkout) {
+        reps=0;
+    }
 }

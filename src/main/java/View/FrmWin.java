@@ -13,6 +13,7 @@ public class FrmWin extends javax.swing.JFrame {
      */
     public FrmWin() {
         initComponents();
+         setLocationRelativeTo(null);
     }
 
     public void setExitButtonListener(ActionListener listener) {

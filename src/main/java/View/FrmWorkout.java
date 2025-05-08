@@ -72,7 +72,6 @@ public class FrmWorkout extends javax.swing.JFrame {
                     lblPhase.setText(training); // Exercise phase
                 } else if ((secondsSelected - countDown) % timePerRep >= exerciseTime && countDown > 0) {
                     lblPhase.setText(rest); // Rest phase
-                    lblPhase.setForeground(countDown <= 10 ? Color.BLUE : Color.BLACK); // Change label color when reaching 10s
                 }
 
                 // ----------40s per Rep

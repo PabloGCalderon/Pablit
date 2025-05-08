@@ -18,7 +18,7 @@ public class FrmHome extends javax.swing.JFrame {
      */
     public FrmHome() {
         initComponents();
-  setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
     }
     
     public void listenButtons(ActionListener controller){
